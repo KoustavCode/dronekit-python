@@ -1,34 +1,40 @@
+===============
 Getting Started
 ===============
 
 On-board apps for drones typically run on a Linux-based "companion computer" that communicates with the autopilot via a serial port.  However, you may find it easier to first prototype your app on a standard Mac, Windows, or Linux 
 computer using a simulated autopilot, a process called "Software in the Loop Simulation" (SITL). This document will show you how to do both of these.
 
+
 Supported Companion Computers
------------------------------
+=============================
+
 
 RaspberryPi
-~~~~~~~~~~~
+-----------
+
 * `Communicating with Raspberry Pi via MAVLink <http://dev.ardupilot.com/wiki/companion-computers/raspberry-pi-via-mavlink/>`_
 * `Making a Mavlink WiFi bridge using the Raspberry Pi <http://dev.ardupilot.com/wiki/companion-computers/raspberry-pi-via-mavlink/making-a-mavlink-wifi-bridge-using-the-raspberry-pi/>`_
 
 Intel Edison
-~~~~~~~~~~~~
+------------
+
 * `Edison for drones <http://dev.ardupilot.com/wiki/companion-computers/edison-for-drones/>`_
 
 BeagleBoneBlack
-~~~~~~~~~~~~~~~~
+---------------
+
 * `BeaglePilot <http://dev.ardupilot.com/wiki/companion-computers/beaglepilot/>`_
 
 Odroid
-~~~~~~
+------
 * `Communicating with ODroid via MAVLink <http://dev.ardupilot.com/wiki/companion-computers/odroid-via-mavlink/>`_
 * `ODroid Wifi Access Point for sharing files via Samba <http://dev.ardupilot.com/wiki/companion-computers/odroid-via-mavlink/odroid-wifi-access-point-for-sharing-files-via-samba/>`_
 
 
 
 Set up a simulated vehicle
---------------------------
+==========================
 The best way to prototype apps for drones is to use a simulated vehicle. APM provides a Software-In-The-Loop (SITL) environment, which simulates a copter or plane, in Linux.
 
 If you want to test your app in real life, you should also grab a ready to fly copter from the  `3D Robotics Store <http://store.3drobotics.com>`_.
@@ -36,7 +42,7 @@ If you want to test your app in real life, you should also grab a ready to fly c
 
 
 Dependencies
-~~~~~~~~~~~~
+------------
 
 If you are using Mac OSX or Windows, you need to set up a virtual Linux machine to run SITL. 
 
@@ -44,7 +50,7 @@ A popular virtual machine manager for running SITL is `Virtual Box <https://www.
 
 
 Set up SITL on Linux
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Please see `instructions here <http://dev.ardupilot.com/wiki/setting-up-sitl-on-linux/>`_ to set up SITL on Ubuntu.
 
@@ -60,7 +66,7 @@ Once you have the simulated vehicle running, enter the following commands. (You 
 
 
 Installing DroneKit
--------------------
+===================
 
 If you are using a virtual vehicle to prototype, it is recommended that you install DroneKit on that virtual environment where you are running SITL.
 
@@ -68,7 +74,7 @@ If you are planning to run DroneKit on an onboard computer, make sure that the o
 
 
 Linux dependencies
-~~~~~~~~~~~~~~~~~~
+------------------
 
 If you are running Ubuntu or Debian Linux you can get all the DroneKit dependencies by running:
 
@@ -78,7 +84,7 @@ If you are running Ubuntu or Debian Linux you can get all the DroneKit dependenc
 
 
 OSX dependencies
-~~~~~~~~~~~~~~~~
+----------------
 
 If you're on Mac OSX, you can use `Homebrew <http://brew.sh/>`_ to install WXMac.
 
@@ -100,7 +106,7 @@ On OSX you need to uninstall python-dateutil since osx comes bundled with a vers
 
 
 Windows dependencies
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 The windows installation is a little more involved, but not too hard.
 
@@ -122,7 +128,7 @@ Open the folder where you installed WinPython, run "*WinPython Control Panel*" a
 	pip install droneapi
 
 Install MAVProxy
-~~~~~~~~~~~~~~~~
+----------------
 
 When developing new DroneKit Python code the easiest approach is to run it inside of MAVProxy, a lightweight CLI tool to send MAVLink messages. Learn more about MAVProxy `here <http://tridge.github.io/MAVProxy/>`_. 
 
@@ -134,7 +140,7 @@ Install MAVProxy with the following command:
 
 
 Set up DroneKit
-~~~~~~~~~~~~~~~
+---------------
 
 The DroneKit library is available on the public pypi repository. You can use the PyPi tool to install.
 
